@@ -32,11 +32,7 @@
             //-   != getSvg('ta-pubdate')
             //-   span= date(post.date) 
 
-            if post.categories.length > 0
-              .home-article-categories
-                != getSvg('ta-category')
-                each cat in post.categories.toArray()
-                  a(href=url_for(cat.path))= cat.name
+            
             
             if post.tags.length > 0
               .home-article-tags

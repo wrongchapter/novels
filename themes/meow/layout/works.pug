@@ -1,0 +1,17 @@
+extends page
+
+block content
+  .works-list
+    - const posts = site.posts.sort('-date').toArray()
+
+    each post in posts
+      article.works-item
+        h2.works-item-title
+          a(href=url_for(post.path))= post.title
+
+        if post.excerpt
+          .works-item-excerpt!= post.excerpt
+
+        if post.tags && post.tags.length
+          .works-item-tags
+            != list_tags(post.tags, {class:'works-item-tags', show_count:false, style:false, separator:' · '})

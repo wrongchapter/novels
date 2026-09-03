@@ -1,0 +1,37 @@
+extends page
+
+block content
+  .ip-index
+    - const posts = site.posts.toArray()
+    - const ipMap = {}
+
+    each post in posts
+      if post
+        - const ips = Array.isArray(post.ip) ? post.ip : (post.ip ? [post.ip] : [])
+        - const cps = Array.isArray(post.cp) ? post.cp : (post.cp ? [post.cp] : [])
+
+        each ipName in ips
+          - if (!ipMap[ipName]) ipMap[ipName] = {}
+
+          if cps.length
+            each cpName in cps
+              - if (!ipMap[ipName][cpName]) ipMap[ipName][cpName] = []
+              - ipMap[ipName][cpName].push(post)
+          else
+            - if (!ipMap[ipName]['无CP']) ipMap[ipName]['无CP'] = []
+            - ipMap[ipName]['无CP'].push(post)
+
+    each cpMap, ipName in ipMap
+      section.ip-group
+        h2.ip-title= ipName
+
+        each works, cpName in cpMap
+          .cp-group
+            h3.cp-title
+              span= cpName
+              small= '（' + works.length + '）'
+
+            ul.cp-works
+              each work in works
+                li
+                  a(href=url_for(work.path))= work.title

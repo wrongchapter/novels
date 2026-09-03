@@ -1,15 +1,8 @@
 .footer
   #footer-copyright
-    - let start_date = date(new Date(theme.info.start_date), "YYYY")
-    - let cr_year = "© " + start_date
-    if date(Date.now(), "YYYY") !== start_date
-      - cr_year = cr_year + " - " + date(Date.now(), "YYYY")
-
-    if theme.footer.icon
-      - cr_year = cr_year + " <span>" + theme.footer.icon + "</span> "
+  span SUNOCO · 转载请注明作者及出处
     
-    | !{cr_year}
-    a(href=url_for(theme.footer.author_link))= config.author || "MEOW Team"
+    
   
   #footer-info
     //- Please keep the copyright information of this theme in the footer to support Meow and the author. Thank you very much!

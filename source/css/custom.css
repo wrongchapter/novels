@@ -42,3 +42,18 @@ h1, h2, h3, h4, h5, h6,
 .banner-text .h2 {
   font-family: Georgia, "PingFang SC", sans-serif !important;
 }
+
+/* 文章页：标题下方 tags 居中 */
+.post-attribute {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.post-attribute .post-tags {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5em;
+}
