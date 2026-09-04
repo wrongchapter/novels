@@ -9,7 +9,11 @@
         if theme.banner.subtitle.effect
           span#site-subtitle
         else
-          != theme.banner.subtitle.text[0]
+          each line in theme.banner.subtitle.text
+            if line
+              div.banner-subtitle-line= line
+            else
+              div.banner-subtitle-space
 
-  #home-banner-scrolldown
+  //#home-banner-scrolldown
     #scroll-to-main= "﹀"

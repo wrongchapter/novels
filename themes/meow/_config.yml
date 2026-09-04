@@ -77,7 +77,7 @@ search:
 banner:
   # Background image of banner under light/dark mode
   image:
-    light: /images/home.jpg
+    light: /images/default.jpg
     dark: /images/home.jpg
     is_fixed: false # Whether the image is fixed as background or scrollable with banner at homepage, true or false
     position: center top # horizontal(left/center/right) vertical(top/center/bottom)
@@ -96,7 +96,9 @@ banner:
     enable: true # Whether to show subtitle
     # Subtitle text (Data type: Array)
     text: 
-    - "致爱，致恨，致自由的留白"
+    - "这里是SUNOCO.桑扣的精神废墟。"
+    - ""
+    - "目前缓慢施工/搬运旧文。"
       # - "A cute and responsive theme for Hexo"
     effect: false # Typewriter effect, true or false(only show the first text).
     type_speed: 100 # Typing speed (ms)
@@ -120,6 +122,7 @@ sidebar:
   info:
     enable: true # Whether to show information card
     type: author # Which type of avatar to show, site or author
+    name: SUNOCO/桑扣
     status: # Status next to the avatar
       emoji: false # false or emoji
       desc: # Describe the status

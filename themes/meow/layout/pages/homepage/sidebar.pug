@@ -11,7 +11,7 @@ aside#home-sidebar
         if theme.sidebar.info.status.emoji
           .status(title=theme.sidebar.info.status.desc)= theme.sidebar.info.status.emoji
 
-      #sidebar-info-name=  theme.sidebar.info.type == "author" ? config.author : config.title
+      #sidebar-info-name= theme.sidebar.info.name || (theme.sidebar.info.type == "author" ? config.author : config.title)
 
       #sidebar-info-desc= theme.sidebar.info.desc
 

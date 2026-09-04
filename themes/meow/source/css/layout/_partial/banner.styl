@@ -30,9 +30,12 @@
   margin-bottom: .4rem
 
 #home-banner-subtitle
-  font-size: 1.15rem
+  font-size: 1.35rem
   line-height: 1.8rem
-  text-shadow: none
+  color: #fffaf0
+  text-shadow:
+    0 1px 2px rgba(0, 0, 0, .75),
+    0 0 5px rgba(0, 0, 0, .45)
 
 #home-banner-scrolldown
   z-index: $z-index-7
@@ -92,6 +95,9 @@
   font-family: var(--meow-font-title)
   text-shadow: var(--meow-text-shadow-title)
   animation: show-up .6s ease-out
+
+.banner-subtitle-space
+  height: 1rem
 
 +meow-smallscreen()
   #home-banner-title

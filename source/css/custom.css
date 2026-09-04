@@ -17,6 +17,7 @@ h1, h2, h3, h4, h5, h6,
   letter-spacing: 0.02em;
 }
 
+
 /* 顶部导航栏 */
 .navbar,
 .navbar .nav-link,
@@ -56,4 +57,11 @@ h1, h2, h3, h4, h5, h6,
   justify-content: center;
   align-items: center;
   gap: 0.5em;
+}
+
+/* 小说正文留白 */
+.gap {
+  display: block;
+  height: 100px !important;
+  background: red;
 }
