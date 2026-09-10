@@ -21,7 +21,7 @@ info:
 color:
   # Light Mode
   light:
-    theme_color: '#607D78'
+    theme_color: '#748579'
   # Dark Mode
   dark:
     theme_color: '#8FA9A4'
@@ -77,14 +77,14 @@ search:
 banner:
   # Background image of banner under light/dark mode
   image:
-    light: /images/default.jpg
-    dark: /images/home.jpg
+    light: /images/argenteuil.jpg
+    dark: /images/argenteuil.jpg
     is_fixed: false # Whether the image is fixed as background or scrollable with banner at homepage, true or false
-    position: center top # horizontal(left/center/right) vertical(top/center/bottom)
+    position: center center # horizontal(left/center/right) vertical(top/center/bottom)
     repeat: no-repeat # repeat/repeat-x/repeat-y/no-repeat
   # Banner avatar (not at homepage)
   avatar:
-    type: site # site(logo) or author(avatar) or false
+    type: false # site(logo) or author(avatar) or false
     shape: 1 # Shape of avatar. 1(normal) or 2(circle)
     border: false # Whether to add border to avatar
   # Banner title

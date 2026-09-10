@@ -19,9 +19,9 @@
           a(href=url_for(post.path))= post.title
 
         if post.excerpt != 'false'
-          .home-article-excerpt
+          
             if post.excerpt
-              != strip_html(post.excerpt)
+              .home-article-excerpt!= post.excerpt
             else
               - let excerpt_length = theme.post.excerpt_length || 200
               != truncate(strip_html(post.content).replace(/\s{2,}/g, " "), {length: excerpt_length})
