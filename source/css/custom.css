@@ -65,3 +65,17 @@ h1, h2, h3, h4, h5, h6,
   height: 100px !important;
   background: red;
 }
+
+/* 手机侧栏菜单 */
+#menu-aside .menu-aside-item > a > span {
+  font-size: 20px !important;
+}
+
+#menu-aside .menu-aside-item {
+  margin-bottom: 12px;
+}
+
+/* 手机首页显示 tags */
+.home-article-tags {
+  visibility: visible !important;
+}

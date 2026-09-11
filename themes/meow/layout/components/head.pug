@@ -15,7 +15,7 @@ meta(name="keywords" content=page_keywords)
 
 - var page_title = ""
 if is_home()
-  - page_title = (config.title || "MEOW THEME") + ' - ' + (config.subtitle || "A Cute Hexo Theme")
+  - page_title = config.title || "MEOW THEME"
 else
   if is_archive()
     - page_title = __('archives')
@@ -72,6 +72,7 @@ if theme.font.custom
     link(rel="preconnect" href=code_font_link)
 
 != css('css/style')
+!= css('css/custom')
 
 case page.type
   when "essay"

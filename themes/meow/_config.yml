@@ -247,7 +247,7 @@ code:
 
 # Markdown Style
 markdown:
-  hr_icon: 🐈 # Icon display on horizontal rule, emoji or false
+  hr_icon: 🐱 # Icon display on horizontal rule, emoji or false
 
 # Page View Counting
 page_view:

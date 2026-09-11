@@ -37,10 +37,7 @@ header
 #menu-aside
   #menu-aside-container
     #menu-aside-info
-      a(href=url_for('/') title=__('home'))
-        img(src=url_for(theme.info.logo) alt='Logo')
-
-      a(href=url_for('/') title=__('home'))= config.title || "MEOW"
+      
 
     if theme.menu
       each value, title in theme.menu
@@ -64,4 +61,4 @@ header
                       != getSvg(trim(submenu.split('||')[1]))
                     span= __(subtitle)
     
-    hr
+    
