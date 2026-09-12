@@ -1,4 +1,5 @@
 /* 全站字体：中文苹方，英文 Georgia */
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700&display=swap');
 body,
 .markdown-body,
 .post-content,
@@ -6,7 +7,7 @@ h1, h2, h3, h4, h5, h6,
 .navbar,
 .navbar-brand,
 .navbar-nav {
-  font-family: Georgia, "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-family: "EB Garamond", "PingFang SC", "Microsoft YaHei", sans-serif;
 }
 
 /* 正文 */
@@ -22,7 +23,7 @@ h1, h2, h3, h4, h5, h6,
 .navbar,
 .navbar .nav-link,
 .navbar-brand {
-  font-family: Georgia, "PingFang SC", sans-serif !important;
+  font-family: "EB Garamond", "PingFang SC", sans-serif !important;
   font-size: 17px !important;
   font-weight: 400;
 }
@@ -32,16 +33,16 @@ h1, h2, h3, h4, h5, h6,
 .banner-text .h1,
 .banner-text .h2,
 .banner-text span {
-  font-family: Georgia, "PingFang SC", sans-serif !important;
+  font-family: "EB Garamond", "PingFang SC", sans-serif !important;
   font-size: 42px !important;
-  font-weight: 400 !important;
-  letter-spacing: 0.04em;
+  font-weight: 700 !important;
+  letter-spacing: 0.02em;
 }
 
 /* 页面大标题，比如作品库、关于、IP索引 */
 .banner-text .h1,
 .banner-text .h2 {
-  font-family: Georgia, "PingFang SC", sans-serif !important;
+  font-family: "EB Garamond", "PingFang SC", sans-serif !important;
 }
 
 /* 文章页：标题下方 tags 居中 */

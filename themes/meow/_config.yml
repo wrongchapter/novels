@@ -122,7 +122,7 @@ sidebar:
   info:
     enable: true # Whether to show information card
     type: author # Which type of avatar to show, site or author
-    name: SUNOCO/桑扣
+    name: SUNOCO.桑扣
     status: # Status next to the avatar
       emoji: false # false or emoji
       desc: # Describe the status
