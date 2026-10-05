@@ -22,7 +22,27 @@
     .post-tail-tags
       != list_tags(page.tags, {class:'post-tail-tags', show_count:false, style:false, separator:''})
 
-  if theme.post.navigator
+  if page.series && page.chapter != undefined
+    - const chapterNav = getChapterNav(page)
+    if chapterNav
+      .chapter-nav
+        if chapterNav.prev
+          a.chapter-nav-prev(href=url_for(chapterNav.prev.path) title=chapterNav.prev.title)
+            span.chapter-nav-label ← 上一章
+            span.chapter-nav-title= chapterNav.prev.title
+        else
+          span.chapter-nav-empty
+
+        .chapter-nav-series= page.series
+
+        if chapterNav.next
+          a.chapter-nav-next(href=url_for(chapterNav.next.path) title=chapterNav.next.title)
+            span.chapter-nav-label 下一章 →
+            span.chapter-nav-title= chapterNav.next.title
+        else
+          span.chapter-nav-empty
+
+  if theme.post.navigator && !(page.series && page.chapter != undefined)
     .post-nav
       if page.prev
         a.post-nav-prev(href=url_for(page.prev.path) title=page.prev.title)

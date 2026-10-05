@@ -106,3 +106,32 @@ hexo.extend.helper.register('getCategoryList', function () {
   getHierarchicalList(0);
   return result;
 });
+
+// Chapter navigation for series posts
+hexo.extend.helper.register('getChapterNav', function (page) {
+  if (!page.series || page.chapter === undefined || page.chapter === null) {
+    return null;
+  }
+
+  const currentChapter = Number(page.chapter);
+
+  if (Number.isNaN(currentChapter)) {
+    return null;
+  }
+
+  const chapters = this.site.posts
+    .filter(post => post.series === page.series && post.chapter !== undefined && post.chapter !== null)
+    .toArray()
+    .sort((a, b) => Number(a.chapter) - Number(b.chapter));
+
+  const currentIndex = chapters.findIndex(post => post.path === page.path);
+
+  if (currentIndex === -1) {
+    return null;
+  }
+
+  return {
+    prev: currentIndex > 0 ? chapters[currentIndex - 1] : null,
+    next: currentIndex < chapters.length - 1 ? chapters[currentIndex + 1] : null
+  };
+});
