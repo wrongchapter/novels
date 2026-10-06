@@ -1,8 +1,6 @@
-/* 全站字体：中文苹方，英文 Georgia */
+/* 网站标题与界面字体：中文苹方，英文 EB Garamond */
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700&display=swap');
 body,
-.markdown-body,
-.post-content,
 h1, h2, h3, h4, h5, h6,
 .navbar,
 .navbar-brand,
@@ -13,9 +11,10 @@ h1, h2, h3, h4, h5, h6,
 /* 正文 */
 .markdown-body,
 .post-content {
-  font-size: 20px;
-  line-height: 1.9;
-  letter-spacing: 0.02em;
+  font-family: "Lucida Grande", "Lucida Sans Unicode", Verdana, Helvetica, "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-size: 18px;
+  line-height: 1.75;
+  letter-spacing: 0;
 }
 
 
@@ -79,4 +78,66 @@ h1, h2, h3, h4, h5, h6,
 /* 手机首页显示 tags */
 .home-article-tags {
   visibility: visible !important;
+}
+
+/* 文章顶部作者与日期：稍偏书面 */
+.post-author,
+.post-meta {
+  font-family: "EB Garamond", "PingFang SC", "Microsoft YaHei", sans-serif;
+}
+
+/* 首页 Summary */
+.home-article-excerpt {
+  font-family: "Lucida Grande", "Lucida Sans Unicode", Verdana, Helvetica, "PingFang SC", "Microsoft YaHei", sans-serif;
+}
+
+/* IP 索引 */
+.ip-index {
+  font-family: "Lucida Grande", "Lucida Sans Unicode", Verdana, Helvetica, "PingFang SC", "Microsoft YaHei", sans-serif;
+}
+
+.ip-index h1,
+.ip-index h2,
+.ip-index h3,
+.ip-index h4,
+.ip-index h5,
+.ip-index h6 {
+  font-family: inherit;
+}
+
+/* 作品库内容 */
+.works-list {
+  font-family: "Lucida Grande", "Lucida Sans Unicode", Verdana, Helvetica,
+               "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-size: 18px;
+}
+
+/* 作品库中的作品标题 */
+.works-item-title {
+  font-family: inherit;
+}
+
+/* 作品简介 */
+.works-item-excerpt {
+  font-family: inherit;
+}
+
+/* 作品标签 */
+.works-item-tags {
+  font-family: inherit;
+}
+
+/* Tag 前加 # */
+.works-item-tags a::before {
+  content: "#";
+}
+
+/* 首页 Tag 前加 # */
+.home-article-tags a::before {
+  content: "#";
+}
+
+/* 首页侧栏站名 */
+#sidebar-info-name {
+  font-weight: 500;
 }

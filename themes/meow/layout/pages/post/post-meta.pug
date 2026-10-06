@@ -1,10 +1,15 @@
 .post-meta
   .post-info
     .post-date
-      
+    if page.date
+      .post-created
+        != getSvg('ta-pubdate')
+        span= '写于 ' + date(page.date)
+
+    if page.updated && date(page.updated) != date(page.date)
       .post-update
         != getSvg('ta-update')
-        span= _p('update', date(page.updated))
+        span= '更新于 ' + date(page.updated)
 
     .post-read
       if theme.post.wordcount
