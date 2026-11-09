@@ -82,16 +82,10 @@
   margin-right: .5rem
 
 .home-article-excerpt
-  text-align: justify
-  font-size: 1.05rem
-  margin: .9rem 0
+  margin: 0 0 18px
 
 .home-article-info-container
-  display: flex
-  align-items: center
-  justify-content: space-between
-  font-size: .95rem
-  gap: .5rem
+  margin-top: 14px
 
 .home-article-info
   max-width: 70%
@@ -185,8 +179,6 @@ if hexo-config('home.cover_position') == 'left'
     font-size: 1em
     margin: .35rem 0
   
-  .home-article-categories, .home-article-tags
-    visibility: hidden
 
   .home-article-info-container
     font-size: .9em
@@ -197,3 +189,334 @@ if hexo-config('home.cover_position') == 'left'
   .home-article-content
     padding: .5rem 1.8rem
     margin: .5rem 0
+
+/* ARCHIVES: Sidebar */
+
+#home-sidebar.bookshelf-sidebar
+  box-sizing: border-box
+  padding: 20px 0
+  background: transparent
+  color: var(--font-color)
+  text-align: left
+  font-family: Arial, "Microsoft YaHei", sans-serif
+
+  .bookshelf-title
+    width: 100%
+    margin: 0 0 24px
+    padding: 0
+    font-size: 12px
+    font-weight: 400
+    letter-spacing: 2px
+    color: var(--font-color-light-1)
+    text-align: left
+
+  .bookshelf-all
+    display: block
+    width: 100%
+    box-sizing: border-box
+    margin: 0 0 16px
+    padding: 14px 16px
+    background: #342A35
+    color: #ffffff
+    border-radius: 0
+    font-size: 14px
+    font-weight: 500
+    text-align: left
+    text-decoration: none
+
+  .bookshelf-group
+    width: 100%
+    margin: 0
+
+    details
+      width: 100%
+      margin: 0
+      padding: 0
+      background: transparent !important
+      border: none !important
+      border-radius: 0 !important
+      box-shadow: none !important
+
+    details > summary
+      display: flex !important
+      align-items: center
+      justify-content: flex-start !important
+      gap: 8px
+      width: 100%
+      box-sizing: border-box
+      margin: 0 !important
+      padding: 12px 0 !important
+      background: transparent !important
+      color: var(--font-color) !important
+      border: none !important
+      border-radius: 0 !important
+      box-shadow: none !important
+      list-style: none !important
+      font-family: inherit
+      font-size: 14px
+      font-weight: 500
+      line-height: 1.5
+      text-align: left !important
+      cursor: pointer
+
+      &::-webkit-details-marker
+        display: none
+
+      &::before
+        content: "▸"
+        display: block
+        width: 16px
+        flex: 0 0 16px
+        color: inherit
+        text-align: center
+
+    details[open] > summary
+      background: transparent !important
+      color: var(--font-color) !important
+      border-radius: 0 !important
+
+      &::before
+        content: "▾"
+
+    .bookshelf-subcategories
+      margin: 0 0 8px 16px
+      padding-left: 16px
+      border-left: 1px solid #DED5DD
+
+      a
+        display: block
+        margin: 0
+        padding: 9px 0
+        background: transparent
+        color: var(--font-color)
+        border-radius: 0
+        font-size: 13px
+        font-weight: 400
+        line-height: 1.6
+        text-align: left
+        text-decoration: none
+
+  .bookshelf-about
+    width: 100%
+    margin-top: 16px
+    padding-top: 0
+    border-top: none
+
+    a
+      display: block
+      padding: 10px 0
+      font-family: inherit
+      font-size: 14px
+      font-weight: 400
+      color: var(--font-color) !important
+      text-decoration: none
+      text-align: left
+
+      &:hover
+        opacity: 0.65
+        
+/* ARCHIVES: compact work list */
+
+#home-main
+  gap: 0
+  min-width: 0
+  font-family: Arial, "Microsoft YaHei", sans-serif
+
+  .home-article
+    padding: 26px 0
+    border-bottom: 1px solid #DED5DD
+    border-radius: 0
+    background: transparent
+    box-shadow: none
+    transform: none
+
+  .home-article-content
+    padding: 0
+
+  .home-article-title
+    margin: 0 0 12px
+    line-height: 1.5
+
+    a
+      font-family: Arial, "Microsoft YaHei", sans-serif
+      font-size: 22px
+      font-weight: 600
+      line-height: 1.5
+
+  .home-article-excerpt
+    font-family: Arial, "Microsoft YaHei", sans-serif
+    font-size: 16px
+    font-weight: 400
+    line-height: 1.9
+    margin: 0 0 4px
+    color: var(--font-color-light-1)
+
+  .home-article-warnings
+    margin: 0 0 16px
+    font-size: 14px
+    line-height: 1.7
+    color: #817385
+
+    span
+      color: #655067
+      font-weight: 600
+
+    strong
+      font-weight: 600
+
+  .home-article-info-container
+    margin-top: 14px
+    gap: 20px
+    font-size: 12px
+
+  .home-article-warnings + .home-article-info-container
+    margin-top: 0
+
+/* ARCHIVES: metadata typography */
+
+#home-main
+  .home-article-info-container
+    display: flex
+    flex-direction: row
+    align-items: center
+    justify-content: space-between
+    flex-wrap: nowrap
+    width: 100%
+    margin-top: 14px
+    gap: 20px
+    font-size: 14px
+
+  .home-article-info
+    flex: 1
+    min-width: 0
+    max-width: none
+
+  .home-article-func
+    flex: 0 0 auto
+    margin-left: auto
+    text-align: right
+
+/* ARCHIVES: category breadcrumb */
+#home-main
+  .works-heading
+    display: block
+    margin: 30px 0 20px
+    padding: 0
+    border: none
+    background: transparent
+    color: var(--font-color-light-1)
+    font-family: Arial, "Microsoft YaHei", sans-serif
+    font-size: 12px
+    font-weight: 400
+    letter-spacing: 2px
+    line-height: 1.5
+    text-align: left
+
+/* ARCHIVES: align first article with sidebar button */
+
+/* 全部作品首页 */
+#home-main > .home-article:first-child
+  padding-top: 90px
+
+/* 二级分类页面 */
+#home-main > .works-heading + .home-article
+  padding-top: 51px
+
+/* ===== Mobile bookshelf drawer ===== */
+
+/* Desktop: hide mobile controls */
+#bookshelf-drawer-toggle,
+.bookshelf-drawer-trigger,
+.bookshelf-drawer-overlay,
+.bookshelf-drawer-close {
+  display: none;
+}
+
+@media (max-width: 768px) {
+
+  #bookshelf-drawer-toggle {
+    display: block;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  /* Floating menu button */
+  .bookshelf-drawer-trigger {
+    display: block;
+    position: fixed;
+    right: 18px;
+    bottom: 22px;
+    z-index: 10001;
+    padding: 12px 18px;
+    background: #342A35;
+    color: #F5F1F1;
+    font-size: 15px;
+    cursor: pointer;
+  }
+
+  /* Off-canvas menu */
+  #home-content #home-sidebar {
+    display: block !important;
+    position: fixed !important;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: auto;
+    width: min(82vw, 340px) !important;
+    height: 100dvh;
+    overflow-y: auto;
+    box-sizing: border-box;
+    padding: 64px 24px 30px;
+    margin: 0 !important;
+    background: #F5F1F1;
+    z-index: 10003;
+
+    transform: translateX(105%);
+    transition: transform 0.25s ease;
+    visibility: hidden;
+  }
+
+  /* Darkened page background */
+  .bookshelf-drawer-overlay {
+    display: block;
+    position: fixed;
+    inset: 0;
+    background: rgba(20, 15, 22, 0.45);
+    z-index: 10002;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.25s ease;
+  }
+
+  /* Open drawer */
+  #bookshelf-drawer-toggle:checked ~ #home-sidebar {
+    transform: translateX(0);
+    visibility: visible;
+  }
+
+  #bookshelf-drawer-toggle:checked ~ .bookshelf-drawer-overlay {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+
+  /* Close button */
+  .bookshelf-drawer-close {
+    display: block;
+    position: absolute;
+    top: 18px;
+    right: 20px;
+    color: #655067;
+    font-size: 14px;
+    cursor: pointer;
+  }
+
+  /* Hide floating trigger when drawer is open */
+  #bookshelf-drawer-toggle:checked ~ .bookshelf-drawer-trigger {
+    visibility: hidden;
+  }
+}

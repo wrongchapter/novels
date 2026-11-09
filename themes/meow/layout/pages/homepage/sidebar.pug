@@ -1,79 +1,44 @@
-aside#home-sidebar
-  if theme.sidebar.info.enable
-    .sidebar-card#sidebar-info
-      #sidebar-info-img
-        a(href=url_for(theme.sidebar.info.link))
-          if theme.sidebar.info.type == "author"
-            img(src=url_for(theme.info.avatar) alt='Avatar')
-          else if theme.sidebar.info.type == "site"
-            img(src=url_for(theme.info.logo) alt='Avatar')
 
-        if theme.sidebar.info.status.emoji
-          .status(title=theme.sidebar.info.status.desc)= theme.sidebar.info.status.emoji
+aside#home-sidebar.bookshelf-sidebar
+  .bookshelf-title 作品 / ARCHIVES
+  label.bookshelf-drawer-close(for='bookshelf-drawer-toggle') × 关闭
 
-      #sidebar-info-name= theme.sidebar.info.name || (theme.sidebar.info.type == "author" ? config.author : config.title)
+  a.bookshelf-all(href=url_for('/'))
+    | 全部作品
 
-      #sidebar-info-desc= theme.sidebar.info.desc
+  - const currentCategory = is_category() ? page.category : ''
 
-      if theme.sidebar.info.statistic
-        .site-statistic
-          a(href=url_for(config.archive_dir))
-            .site-statistic-num= site.posts.length
-            .site-statistic-title= __('archives')
-          a(href=url_for(config.category_dir))
-            .site-statistic-num= site.categories.length
-            .site-statistic-title= __('categories')
-          a(href=url_for(config.tag_dir))
-            .site-statistic-num= site.tags.length
-            .site-statistic-title= __('tags')
+  .bookshelf-group
+    details(open=currentCategory === '龙族')
+      summary 小说
+      .bookshelf-subcategories
+        a(href=url_for('/categories/小说/龙族/')) 龙族
 
-      if theme.sidebar.info.social.enable
-        if theme.sidebar.info.social.list
-          .social
-            each value, profile in theme.sidebar.info.social.list
-              - var social_link = trim(value.split('||')[1])
-              if profile == "email" || profile == "mail"
-                - social_link = "mailto:" + social_link
-              a(href=url_for(social_link) title=__('social.' + profile) target='_blank')
-                != getSvg(trim(value.split('||')[0]))
+  .bookshelf-group
+    details(open=['名柯', '银魂', '黑篮'].includes(currentCategory))
+      summary 二次元
+      .bookshelf-subcategories
+        a(href=url_for('/categories/二次元/名柯/')) 名柯
+        a(href=url_for('/categories/二次元/银魂/')) 银魂
+        a(href=url_for('/categories/二次元/黑篮/')) 黑篮
+
+  .bookshelf-group
+    details(open=['喜人', '明侦', '极挑', '乐夏', '梅溪湖', '脱人'].includes(currentCategory))
+      summary Real People Slash
+      .bookshelf-subcategories
+        a(href=url_for('/categories/Real-People-Slash/喜人/')) 喜人
+        a(href=url_for('/categories/Real-People-Slash/明侦/')) 明侦
+        a(href=url_for('/categories/Real-People-Slash/极挑/')) 极挑
+        a(href=url_for('/categories/Real-People-Slash/乐夏/')) 乐夏
+        a(href=url_for('/categories/Real-People-Slash/梅溪湖/')) 梅溪湖
+        a(href=url_for('/categories/Real-People-Slash/脱人/')) 脱人
+
+  .bookshelf-group
+    details(open=['国产', '欧美'].includes(currentCategory))
+      summary 剧 / 影
+      .bookshelf-subcategories
+        a(href=url_for('/categories/剧-影/国产/')) 国产
+        a(href=url_for('/categories/剧-影/欧美/')) 欧美
   
-  if theme.sidebar.announcement
-    .sidebar-card#sidebar-announcement
-      .sidebar-card-headline
-        != getSvg('announcement', {class:'icon box-icon'})
-        span= __('announcement')
-      .markdown
-        != markdown(theme.sidebar.announcement)
-
-  if theme.sidebar.links.enable
-    .sidebar-card#sidebar-links
-      .sidebar-card-headline
-        != getSvg('link', {class:'icon box-icon'})
-        span= theme.sidebar.links.title
-      if theme.sidebar.links.list
-        #sidebar-links-content
-          each value, name in theme.sidebar.links.list
-            a(href=url_for(value))= name
-
-  if theme.sidebar.categories.enable
-    .sidebar-card#sidebar-categories
-      .sidebar-card-headline
-        != getSvg('category', {class:'icon box-icon'})
-        span= __('categories')
-      != list_categories(site.categories, {class:'sidebar-categories', depth: theme.sidebar.categories.depth})
-
-  if theme.sidebar.tags.enable
-    .sidebar-card#sidebar-tags
-      .sidebar-card-headline
-        != getSvg('tag', {class:'icon box-icon'})
-        span= __('tags')
-      #sidebar-tags-content
-        != list_tags(site.tags, {class:'sidebar-tags', style: false, separator:' ', orderby:'count', order: -1})
-  
-  if theme.sidebar.recent_comments.enable
-    .sidebar-card#sidebar-recent-comments
-      .sidebar-card-headline
-        != getSvg('comment', {class:'icon box-icon'})
-        span= __('comment.latest_comment')
-      .recent-comments
-        .recent-comments-container= __('loading')
+  .bookshelf-about
+    a(href=url_for('/about/')) 关于本站 / 作者碎碎念

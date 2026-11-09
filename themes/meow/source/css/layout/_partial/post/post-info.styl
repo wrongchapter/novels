@@ -68,22 +68,45 @@ body[data-mode="dark"] .post-meta .icon
   .post-categories, .post-tags
     flex-wrap: wrap
 
+/* Article metadata */
 .post-meta
+  margin: 1rem 0
+  color: var(--font-color-light-1)
+  font-family: Arial, "PingFang SC", "Microsoft YaHei", sans-serif
+  font-size: 14px
+  line-height: 1.6
+  gap: 10px
+
+  .post-date
+    display: flex
+    align-items: center
+    justify-content: center
+    flex-wrap: wrap
+    gap: 6px 18px
+
   .post-attribute
     width: 100%
     display: flex
-    justify-content: center !important
+    justify-content: center
     align-items: center
+    flex-wrap: wrap
     text-align: center
 
   .post-tags
     display: flex
     justify-content: center
     align-items: center
-    gap: .5rem
 
     span
       display: flex
       justify-content: center
       align-items: center
-      gap: .5rem
+      flex-wrap: wrap
+      gap: 12px
+
+    a
+      color: var(--font-color-light-1)
+      text-decoration: none
+
+      &:hover
+        color: var(--theme-color)

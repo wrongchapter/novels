@@ -8,7 +8,8 @@ html(lang= config.language)
     if is_post() && theme.post.progress_bar
       != partial('pages/post/post-progressbar')
 
-    != partial('components/header')
+    if theme.menu && Object.keys(theme.menu).length > 0
+      != partial('components/header')
 
     main
       != body

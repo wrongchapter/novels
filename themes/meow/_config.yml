@@ -9,9 +9,9 @@
 # Website Info
 info:
   # Site Favicon
-  favicon: assets/images/Hexo-Theme-MEOW.ico
+  favicon: /images/fanvicon.png
   # Site Logo
-  logo: assets/images/Hexo-Theme-MEOW.png
+  logo: s/images/fanvicon.png
   # Author Avatar
   avatar: /images/avatar.jpg
   # Datetime of when this website was built
@@ -21,7 +21,7 @@ info:
 color:
   # Light Mode
   light:
-    theme_color: '#748579'
+    theme_color: '#655067'
   # Dark Mode
   dark:
     theme_color: '#8FA9A4'
@@ -50,11 +50,8 @@ font:
   code_font_family: "'SF Mono', 'PingFang SC', 'Microsoft YaHei', monospace" # Define code fonts
 
 # Navigation Bar
-menu:
-  主页: /
-  作品库: /works/
-  IP索引: /ip/
-  关于: /about/
+menu: {}
+  
 
 # Navigation Bar Configuration
 menu_options:

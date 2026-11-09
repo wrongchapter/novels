@@ -1,7 +1,13 @@
-!= partial('components/banner')
+if page.path != 'about/index.html'
+  != partial('components/banner')
 
 .page-container
-  .page-content
+  .page-content(class=page.path == 'about/index.html' ? 'about-page' : '')
+    if page.path == 'about/index.html'
+      a.about-back-link(href=url_for('/')) ← 返回主页
+      .about-ruins-image
+        img(src=url_for('/images/ruins.jpg') alt='古罗马遗址版画')
+
     .page-title
       .page-title-content
         if is_archive()

@@ -1,4 +1,13 @@
 #home-main
+  if is_category()
+    - const categoryParents = {'龙族':'小说', '名柯':'二次元', '银魂':'二次元', '黑篮':'二次元', '喜人':'Real People Slash', '明侦':'Real People Slash', '极挑':'Real People Slash', '乐夏':'Real People Slash', '梅溪湖':'Real People Slash', '脱人':'Real People Slash', '国产':'剧 / 影', '欧美':'剧 / 影'}
+    - const parentName = categoryParents[page.category]
+    .works-heading
+      if parentName
+        span= parentName + ' / ' + page.category
+      else
+        span= page.category
+
   - for (post of page.posts.toArray())
     .home-article
       - let article_cover = post.cover || post.photo
@@ -9,37 +18,28 @@
 
       .home-article-content(cover=article_cover ? '' : 'nocover')
         .home-article-title
-          if post.encrypt
-            .home-article-encrypt
-              != getSvg('lock')
-
           if post.sticky
             .home-article-sticky= __('sticky')
-          
           a(href=url_for(post.path))= post.title
 
-        if post.excerpt != 'false'
-          
-            if post.excerpt
-              .home-article-excerpt!= post.excerpt
-            else
-              - let excerpt_length = theme.post.excerpt_length || 200
-              != truncate(strip_html(post.content).replace(/\s{2,}/g, " "), {length: excerpt_length})
+        if post.description
+          .home-article-excerpt= post.description
+
+        if post.warnings && post.warnings.length
+          .home-article-warnings
+            span 阅读前警告：
+            each warning, index in post.warnings
+              if index > 0
+                |  · 
+              strong= warning
 
         .home-article-info-container
           .home-article-info
-            //- .home-article-date
-            //-   != getSvg('ta-pubdate')
-            //-   span= date(post.date) 
-
-            
-            
             if post.tags.length > 0
               .home-article-tags
-                != getSvg('ta-tag')
                 each tag in post.tags.toArray()
                   a(href=url_for(tag.path))= tag.name
-            
+
           .home-article-func
             a.read-more-btn(href=url_for(post.path))= __('read_more') + " >>"
 

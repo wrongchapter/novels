@@ -1,8 +1,26 @@
-!= partial('pages/homepage/home-banner')
 
+//- 第二层：左侧介绍文字，右侧版画
+.home-welcome
+   .home-welcome-text
+     .home-site-label
+       .home-site-label-cn 所在遗址不明
+       .home-site-label-en UNDEFINED RUINS
+
+     h2 这里是 SUNOCO.桑扣的精神废墟。
+     p 用来存放我写过的故事/目前还在缓慢搬运旧文。
+
+   .home-welcome-image
+     img(src=url_for('/images/ruins.jpg') alt='古罗马遗址版画')
+
+//- 原有 ARCHIVES 和文章列表
 #home-container
   #home-content
     if theme.sidebar.enable
+      input#bookshelf-drawer-toggle(type='checkbox')
+      label.bookshelf-drawer-trigger(for='bookshelf-drawer-toggle') ☰ 目录
+
       != partial('pages/homepage/sidebar')
+
+      label.bookshelf-drawer-overlay(for='bookshelf-drawer-toggle')
 
     != partial('pages/homepage/home-articles')

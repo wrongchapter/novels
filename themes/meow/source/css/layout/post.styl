@@ -12,7 +12,6 @@
   gap: 1rem
 
 .post-content
-  font-family: "Lucida Grande", "Lucida Sans Unicode", Verdana, Helvetica, Arial, sans-serif
   width: 100%
   max-width: none
   height: max-content
@@ -172,3 +171,20 @@
     font-size: .8em
     &:after
       display: none
+  
+  .post-content
+  position: relative
+
+  .post-home-link
+    display: inline-block
+    margin-bottom: 20px
+    padding: 8px 0
+    color: var(--font-color-light-1)
+    font-family: Arial, "Microsoft YaHei", sans-serif
+    font-size: 13px
+    font-weight: 400
+    text-decoration: none
+    transition: color .2s ease
+
+    &:hover
+      color: var(--theme-color)

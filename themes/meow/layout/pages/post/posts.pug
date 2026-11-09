@@ -1,9 +1,6 @@
 .post-content
+  a.post-home-link(href=url_for('/')) ← 返回全部作品
   h1.post-title= page.title
-  
-  .post-author
-    span= _p('post_author', page.author || config.author)
-  
   != partial('pages/post/post-meta')
 
   .post.markdown(indent=page.indent || (theme.post.indent && page.indent==undefined) ? "true" : "false")

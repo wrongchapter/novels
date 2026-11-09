@@ -2,31 +2,43 @@
   display: flex
   align-items: center
   justify-content: center
-  gap: .8rem
-  font-size: 1.25rem
+  gap: .7rem
+  font-size: 16px
   text-align: center
   line-height: 2rem
   user-select: none
+
   *:not(.space)
-    display: block
+    display: flex
+    align-items: center
+    justify-content: center
     width: 2rem
     height: 2rem
-    background-color: var(--background-color-transparent-1)
-    backdrop-filter: blur(3px)
-    border-radius: .5rem
-    box-shadow: var(--meow-card-shadow)
+    background-color: transparent
+    border: 1px solid var(--card-border-color)
+    border-radius: 0
+    box-shadow: none
     transition: all .2s ease
+
   span
-    color: var(--font-color-light-2)
+    color: var(--font-color-light-1)
+
   a
     color: var(--font-color)
+    text-decoration: none
+
     &:hover
-      color: var(--link-hover-font-color)
+      color: #ffffff
       background-color: var(--theme-color)
+      border-color: var(--theme-color)
+
   .current
-    color: var(--link-hover-font-color)
+    color: #ffffff
     background-color: var(--theme-color)
+    border-color: var(--theme-color)
+
   .space
-    color: var(--font-color)
+    color: var(--font-color-light-1)
+
   +meow-smallscreen()
-    font-size: 1.05em
+    font-size: 15px
