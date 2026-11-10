@@ -55,31 +55,20 @@
   flex-wrap: wrap
   gap: .2rem .5rem
   user-select: none
+
   a
-    color: var(--font-color-light-2)
-    border-radius: .65rem
+    color: #817385
+    border-radius: 0
     position: relative
     padding: .1rem .5rem
     transition: color .25s ease
-    z-index: 1
+
     &:before
       content: '#'
       margin-right: .1rem
-    &:after
-      content: ''
-      position: absolute
-      top: 0
-      left: 0
-      width: 0
-      height: 100%
-      border-radius: .5rem
-      background: var(--theme-color)
-      z-index: -1
-      transition: all .25s ease-in
+
     &:hover
-      color: var(--link-hover-font-color)
-      &:after
-        width: 100%
+      color: #342A35
 
 .post-nav
   width: 100%

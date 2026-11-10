@@ -1,0 +1,12 @@
+//- 标签页：复用 ARCHIVES 布局
+#home-container
+  #home-content
+    if theme.sidebar.enable
+      input#bookshelf-drawer-toggle(type='checkbox')
+      label.bookshelf-drawer-trigger(for='bookshelf-drawer-toggle') ☰ 目录
+
+      != partial('pages/homepage/sidebar')
+
+      label.bookshelf-drawer-overlay(for='bookshelf-drawer-toggle')
+    .works-heading 标签 / #{page.tag}
+    != partial('pages/homepage/home-articles')

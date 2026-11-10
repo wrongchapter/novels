@@ -1,4 +1,6 @@
 #home-main
+  if page.tag
+    .works-heading 标签 / #{page.tag}
   if is_category()
     - const categoryParents = {'龙族':'小说', '名柯':'二次元', '银魂':'二次元', '黑篮':'二次元', '喜人':'Real People Slash', '明侦':'Real People Slash', '极挑':'Real People Slash', '乐夏':'Real People Slash', '梅溪湖':'Real People Slash', '脱人':'Real People Slash', '国产':'剧 / 影', '欧美':'剧 / 影'}
     - const parentName = categoryParents[page.category]

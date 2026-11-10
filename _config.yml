@@ -3,8 +3,8 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: SUNOCO
-subtitle: ''
+title: 所在遗址不明
+subtitle: undefined ruins
 description: 个人作品存档
 keywords:
 author: SUNOCO.桑扣
@@ -102,3 +102,9 @@ theme: meow
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: ''
+
+# 文章加密设置
+encrypt:
+  decryptButton:
+    show: true
+    text: "解锁文章"

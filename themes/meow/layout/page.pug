@@ -11,15 +11,12 @@ if page.path != 'about/index.html'
     .page-title
       .page-title-content
         if is_archive()
-          !=getSvg('archive')
+          != getSvg('archive')
           h1= __('archives')
         else if is_category() || page.type == "category"
-          !=getSvg('category')
+          != getSvg('category')
           h1= __('categories') + (page.type != "category" ? (": " + page.category) : "")
-        else if is_tag() || page.type == "tag"
-          !=getSvg('tag')
-          h1= __('tags') + (page.type != "tag" ? (": " + page.tag) : "")
-        else
+        else if !is_tag() && page.type != "tag"
           h1= page.title
       
       if theme.page_view.enable && theme.page_view.page_pv && page.count

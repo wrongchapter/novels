@@ -24,7 +24,10 @@ import initSearch from "./theme/search.js";
 const initMain = () => {
   const main = () => {
     // initSwup();
+    initFloatingBack();
     initMenu();
+    
+    console.log("Floating back initialized!");
     if (GLOBALCONFIG.toolbar) initToolbar();
     initScroll();
     initDatetime();
@@ -69,16 +72,45 @@ const refreshFn = () => {
 
   refresh();
 };
+/* 阅读中：原返回按钮滚出顶部后显示悬浮按钮 */
+const initFloatingBack = () => {
+  const original = document.querySelector(".post-home-link");
+  const floating = document.querySelector(".post-floating-back");
+
+  if (!original || !floating) return;
+
+  const updateVisibility = () => {
+    const rect = original.getBoundingClientRect();
+
+    // 原按钮从屏幕上方离开后，显示悬浮按钮
+    const shouldShow = rect.bottom < 0;
+
+    floating.classList.toggle("is-visible", shouldShow);
+  };
+
+  window.addEventListener("scroll", updateVisibility, {
+    passive: true
+  });
+
+  updateVisibility();
+};
 
 document.addEventListener("DOMContentLoaded", initMain);
 
 if (GLOBALCONFIG.encrypt) {
   window.addEventListener("hexo-blog-decrypt", () => {
-    refreshFn();
-    var tocDiv = document.getElementById("toc-div");
-    if (tocDiv) {
-      tocDiv.style.display = 'block';
+    const sidebar = document.querySelector("#post-sidebar");
+    const toc = document.querySelector("#toc-div");
+
+    if (sidebar) {
+      sidebar.setAttribute("status", "show");
     }
+
+    if (toc) {
+      toc.style.display = "";
+    }
+
+    refreshFn();
   });
 }
 

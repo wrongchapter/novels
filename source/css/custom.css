@@ -47,6 +47,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .home-welcome-text h2 {
   margin: 0 0 18px;
+  font-family: Arial, "PingFang SC", "Microsoft YaHei", sans-serif !important;
   font-size: 22px;
   font-weight: 500;
   letter-spacing: 0;
@@ -137,6 +138,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 15px;
   font-weight: 500;
   line-height: 1.5;
+  
 }
 
 .post-home-link:hover {
@@ -175,21 +177,7 @@ h1, h2, h3, h4, h5, h6 {
   display: none !important;
 }
 
-/* Post tail tags: square corners */
-.post-tail-tags a,
-.post-tail-tags a:hover {
-  border-radius: 0 !important;
-}
 
-/* 文章末尾标签：取消圆角 */
-.post-tail-tags,
-.post-tail-tags a,
-.post-tail-tags a:hover,
-.post-tags,
-.post-tags a,
-.post-tags a:hover {
-  border-radius: 0 !important;
-}
 
 /* 08. About page layout */
 
@@ -345,4 +333,102 @@ h1, h2, h3, h4, h5, h6 {
 
 #sidebar-info-name {
   font-weight: 500;
+}
+
+/* 加密文章：解锁按钮 */
+.hbe-button,
+button.hbe-button,
+#hexo-blog-encrypt button {
+  background: #342A35 !important;
+  border-radius: 0 !important;
+  border: none !important;
+  color: #F5F1F1 !important;
+}
+
+/* 鼠标悬停 */
+.hbe-button:hover,
+button.hbe-button:hover,
+#hexo-blog-encrypt button:hover {
+  background: #655067 !important;
+  color: #F5F1F1 !important;
+}
+
+/* 隐藏标签页文章列表外多余的标题 */
+#home-content > .works-heading {
+  display: none !important;
+}
+
+/* 正文章节标题：统一字体 */
+.post-content .markdown-body h2,
+.post-content .markdown-body h3,
+.post-content h2,
+.post-content h3 {
+  font-family: Arial, "PingFang SC", "Microsoft YaHei", sans-serif !important;
+}
+
+/* 右侧章节目录：统一字体 */
+#post-sidebar .toc-content,
+#post-sidebar .toc-content a {
+  font-family: Arial, "PingFang SC", "Microsoft YaHei", sans-serif !important;
+}
+
+
+
+/* 默认文字颜色 */
+.post-tail-tags .post-tail-tags-link {
+  color: #817385 !important;
+}
+
+/* 鼠标悬停或键盘选中 */
+.post-tail-tags .post-tail-tags-link:hover,
+.post-tail-tags .post-tail-tags-link:focus {
+  color: #342A35 !important;
+}
+
+/* 阅读时显示的小型返回按钮 */
+.post-floating-back {
+  position: fixed;
+  top: 20px;
+  left: 24px;
+  z-index: 1000;
+
+  display: inline-block;
+  padding: 10px 16px;
+
+  background: #342A35;
+  color: #F5F1F1 !important;
+  font-family: Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  text-decoration: none !important;
+  border-radius: 0;
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(-8px);
+  transition: opacity .2s ease, transform .2s ease, visibility .2s;
+}
+
+/* 滚动后显示 */
+.post-floating-back.is-visible {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.post-floating-back:hover {
+  background: #655067;
+  color: #F5F1F1 !important;
+}
+
+/* 手机端稍微缩小 */
+@media (max-width: 768px) {
+  .post-floating-back {
+    top: 12px;
+    left: 12px;
+    padding: 9px 12px;
+    font-size: 12px;
+  }
 }
