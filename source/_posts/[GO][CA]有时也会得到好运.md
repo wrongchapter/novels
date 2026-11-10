@@ -3,21 +3,16 @@ title: 有时也会得到好运
 date: 2023-10-03
 updated: 2026-09-17
 
-ip:
+categories:
+  - 剧 / 影
   - Good Omens
 
-cp:
-  - CA
+description: 用旁白梗fix第二季结尾，【】里是旁白
 
 tags:
   - Good Omens
   - CA
 ---
-
-*用旁白梗fix第二季结尾，【】里是旁白
-*我等不了第三季了
-
-<!-- more -->
 
 &nbsp;
 

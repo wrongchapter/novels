@@ -3,20 +3,16 @@ title: 我嗑了我x对家的CP
 date: 2022-09-09
 updated: 2026-09-03
 
-ip:
+categories:
+  - 书
   - 龙族
 
-cp:
-  - 恺楚
+description: 娱乐圈if线
 
 tags:
   - 龙族
   - 恺楚
 ---
-
-*娱乐圈if线，我嗑了我x我对家的CP
-
-<!-- more -->
 
 &nbsp;
 

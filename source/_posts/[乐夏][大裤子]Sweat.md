@@ -2,21 +2,24 @@
 title: Sweat
 date: 2022-07-21
 updated: 2026-09-18
-abstract: 张伟x彭磊，注意前后顺序
-password: "0831"
-message: 请输入密码。提示：张伟生日，四位数
-wrong_pass_message: 密码不对，再试一次吧。
 
-ip:
+categories:
+  - Real People Slash
   - 乐夏
 
-cp:
-  - 大裤子
+warnings: 
+- 张伟x彭磊，注意前后顺序
+
+password: "0831"
+message: 张伟生日，四位数
+wrong_pass_message: 密码不对，再试一次吧。
 
 tags:
   - 乐夏
   - 大裤子
 ---
+
+&nbsp;
 
 “多少钱一次？”
 

@@ -10,13 +10,13 @@ aside#home-sidebar.bookshelf-sidebar
 
   .bookshelf-group
     details(open=currentCategory === '龙族')
-      summary 小说
+      summary 📖 书
       .bookshelf-subcategories
-        a(href=url_for('/categories/小说/龙族/')) 龙族
+        a(href=url_for('/categories/书/龙族/')) 龙族
 
   .bookshelf-group
     details(open=['名柯', '银魂', '黑篮'].includes(currentCategory))
-      summary 二次元
+      summary 👾 二次元
       .bookshelf-subcategories
         a(href=url_for('/categories/二次元/名柯/')) 名柯
         a(href=url_for('/categories/二次元/银魂/')) 银魂
@@ -24,7 +24,7 @@ aside#home-sidebar.bookshelf-sidebar
 
   .bookshelf-group
     details(open=['喜人', '明侦', '极挑', '乐夏', '梅溪湖', '脱人'].includes(currentCategory))
-      summary Real People Slash
+      summary 🎭 Real People Slash
       .bookshelf-subcategories
         a(href=url_for('/categories/Real-People-Slash/喜人/')) 喜人
         a(href=url_for('/categories/Real-People-Slash/明侦/')) 明侦
@@ -35,7 +35,7 @@ aside#home-sidebar.bookshelf-sidebar
 
   .bookshelf-group
     details(open=['国产', '欧美'].includes(currentCategory))
-      summary 剧 / 影
+      summary 🎬 剧 / 影
       .bookshelf-subcategories
         a(href=url_for('/categories/剧-影/国产/')) 国产
         a(href=url_for('/categories/剧-影/欧美/')) 欧美

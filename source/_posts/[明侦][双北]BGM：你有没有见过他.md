@@ -3,20 +3,16 @@ title: BGM：你有没有见过他
 date: 2021-06-01
 updated: 2026-09-18
 
-ip:
+categories:
+  - Real People Slash
   - 明侦
 
-cp:
-  - 双北
+description: 春田花花双北联文大逃猜作品
 
 tags:
   - 明侦
   - 双北
 ---
-
-春田花花双北联文大逃猜作品
-
-<!-- more -->
 
 &nbsp;
 

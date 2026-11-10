@@ -3,20 +3,16 @@ title: Then It All Went Wrong
 date: 2019-06-24
 updated: 2026-09-09
 
-ip:
+categories:
+  - 书
   - 龙族
 
-cp:
-  - 恺楚
+description: 恺撒知道了一个属于楚子航的秘密
 
 tags:
   - 龙族
   - 恺楚
 ---
-
-Summary: 恺撒知道了一个属于楚子航的秘密
-
-<!-- more -->
 
 &nbsp;
 

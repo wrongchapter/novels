@@ -3,20 +3,17 @@ title: 克劳利发现喝醉后的亚兹拉斐尔很不一样
 date: 2023-10-10
 updated: 2026-09-17
 
-ip:
+categories:
+  - 剧 / 影
   - Good Omens
 
-cp:
-  - CA
+warnings: 
+- 互攻前提CA/AC都提及
 
 tags:
   - Good Omens
   - CA
 ---
-
-*注意：互攻前提CA/AC都提及
-
-<!-- more -->
 
 &nbsp;
 

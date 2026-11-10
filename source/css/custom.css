@@ -432,3 +432,21 @@ button.hbe-button:hover,
     font-size: 12px;
   }
 }
+
+/* 文章右侧目录：缩小字号 */
+#post-sidebar .toc-content,
+#post-sidebar .toc-content a {
+  font-size: 16px !important;
+  line-height: 1.8;
+}
+
+/* 文章右侧目录标题 */
+#post-sidebar .toc-title,
+#post-sidebar .toc-title span {
+  font-size: 16px !important;
+}
+
+/* 首页文章简介：保留 description 中的换行 */
+.home-article-excerpt {
+  white-space: pre-line;
+}
