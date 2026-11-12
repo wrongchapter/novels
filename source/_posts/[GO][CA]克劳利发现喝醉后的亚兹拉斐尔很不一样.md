@@ -5,7 +5,7 @@ updated: 2026-09-17
 
 categories:
   - 剧 / 影
-  - Good Omens
+  - 欧美
 
 warnings: 
 - 互攻前提CA/AC都提及
