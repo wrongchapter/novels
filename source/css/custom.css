@@ -450,3 +450,95 @@ button.hbe-button:hover,
 .home-article-excerpt {
   white-space: pre-line;
 }
+
+.author-note {
+  margin-top: 40px;
+  padding: 18px 22px;
+  border-left: 3px solid #80627e;
+  background: rgba(128, 98, 126, 0.06);
+  border-radius: 4px;
+  font-size: 0.92em;
+  line-height: 1.9;
+}
+
+.author-note strong {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 1em;
+  letter-spacing: 0.06em;
+}
+
+.author-note {
+  margin-top: 48px;
+  padding: 24px 28px;
+
+  background: transparent;
+  border: 1px solid #c9c1c5;
+  border-radius: 3px;
+
+  font-size: 0.92em;
+  line-height: 1.9;
+}
+
+.author-note {
+  margin-top: 48px;
+  padding: 22px 0 24px;
+
+  background: transparent;
+  border: none;
+  border-top: 1px solid #c9c1c5;
+  border-bottom: 1px solid #c9c1c5;
+  border-radius: 0;
+
+  font-size: 0.92em;
+  line-height: 1.9;
+}
+
+.author-note {
+  margin-top: 48px;
+  padding: 0 0 20px;
+
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #c9c1c5;
+  border-radius: 0;
+
+  font-size: 0.92em;
+  line-height: 1.9;
+}
+
+/* Author's Note */
+.author-note {
+  margin-top: 48px;
+  padding: 0 0 20px;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #c9c1c5;
+  border-radius: 0;
+  font-size: 0.92em;
+  line-height: 1.9;
+}
+
+/* 标题 + 右侧细线 */
+.author-note > strong {
+  display: flex !important;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+  font-size: 0.85em !important;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  color: #c9c1c5;
+}
+
+.author-note > strong::after {
+  content: "";
+  display: block;
+  flex: 1;
+  height: 0;
+  border-top: 1px solid #c9c1c5;
+}
+
+.author-note > p {
+  margin: 0;
+}

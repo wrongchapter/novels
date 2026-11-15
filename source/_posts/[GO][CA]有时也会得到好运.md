@@ -7,14 +7,15 @@ categories:
   - 剧 / 影
   - 欧美
 
-description: 原来是你到处宣传我们做爱了吗，亚兹拉斐尔
+description: 就是你到处宣传我们做爱了吗，亚兹拉斐尔
+
+warnings:
+- 用旁边梗fix第二季结局，【】里是旁白
 
 tags:
   - Good Omens
   - CA
 ---
-
-**用旁边梗fix第二季结局，【】里是旁白**
 
 &nbsp;
 

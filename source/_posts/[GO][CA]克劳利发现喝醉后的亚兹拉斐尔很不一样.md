@@ -7,9 +7,6 @@ categories:
   - 剧 / 影
   - 欧美
 
-warnings: 
-- 互攻前提CA/AC都提及
-
 tags:
   - Good Omens
   - CA

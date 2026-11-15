@@ -1,0 +1,457 @@
+/* 网站标题与界面字体：中文苹方，英文 EB Garamond */
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700&display=swap');
+body,
+h1, h2, h3, h4, h5, h6,
+.navbar,
+.navbar-brand,
+.navbar-nav {
+  font-family: "EB Garamond", "PingFang SC", "Microsoft YaHei", sans-serif;
+}
+
+/* 正文 */
+.markdown-body,
+.post-content {
+  font-family: Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-size: 18px;
+  line-height: 1.75;
+  letter-spacing: 0;
+}
+
+
+/* 顶部导航栏 */
+.navbar,
+.navbar .nav-link,
+.navbar-brand {
+  font-family: "EB Garamond", "PingFang SC", sans-serif !important;
+  font-size: 17px !important;
+  font-weight: 400;
+}
+
+/* 首页 Banner 中央文字 */
+.banner-text,
+.banner-text .h1,
+.banner-text .h2,
+.banner-text span {
+  font-family: "EB Garamond", "PingFang SC", sans-serif !important;
+  font-size: 42px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.02em;
+}
+
+/* 页面大标题，比如作品库、关于、IP索引 */
+.banner-text .h1,
+.banner-text .h2 {
+  font-family: "EB Garamond", "PingFang SC", sans-serif !important;
+}
+
+
+
+/* 小说正文留白 */
+.gap {
+  display: block;
+  height: 100px !important;
+  background: red;
+}
+
+/* 手机侧栏菜单 */
+#menu-aside .menu-aside-item > a > span {
+  font-size: 20px !important;
+}
+
+#menu-aside .menu-aside-item {
+  margin-bottom: 12px;
+}
+
+/* 手机首页显示 tags */
+.home-article-tags {
+  visibility: visible !important;
+}
+
+
+
+/* 首页 Summary */
+.home-article-excerpt {
+  font-family: "Lucida Grande", "Lucida Sans Unicode", Verdana, Helvetica, "PingFang SC", "Microsoft YaHei", sans-serif;
+}
+
+/* IP 索引 */
+.ip-index {
+  font-family: "Lucida Grande", "Lucida Sans Unicode", Verdana, Helvetica, "PingFang SC", "Microsoft YaHei", sans-serif;
+}
+
+.ip-index h1,
+.ip-index h2,
+.ip-index h3,
+.ip-index h4,
+.ip-index h5,
+.ip-index h6 {
+  font-family: inherit;
+}
+
+/* 作品库内容 */
+.works-list {
+  font-family: "Lucida Grande", "Lucida Sans Unicode", Verdana, Helvetica,
+               "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-size: 18px;
+}
+
+/* 作品库中的作品标题 */
+.works-item-title {
+  font-family: inherit;
+}
+
+/* 作品简介 */
+.works-item-excerpt {
+  font-family: inherit;
+}
+
+/* 作品标签 */
+.works-item-tags {
+  font-family: inherit;
+}
+
+/* Tag 前加 # */
+.works-item-tags a::before {
+  content: "#";
+}
+
+/* 首页 Tag 前加 # */
+.home-article-tags a::before {
+  content: "#";
+}
+
+/* 首页侧栏站名 */
+#sidebar-info-name {
+  font-weight: 500;
+}
+
+/* ===== New homepage banner ===== */
+
+body #home-banner {
+  position: relative !important;
+  width: 100% !important;
+  height: 165px !important;
+  min-height: 165px !important;
+  max-height: 165px !important;
+
+  background-image: url('/images/banner-bay.jpg') !important;
+  background-size: cover !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+  background-attachment: scroll !important;
+
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-end !important;
+  padding: 0 28px !important;
+  box-sizing: border-box !important;
+  overflow: hidden;
+}
+
+/* Remove any old banner overlay */
+#home-banner::before,
+#home-banner::after {
+  display: none !important;
+}
+
+/* Dark title plate ON TOP of the image */
+#home-banner .home-site-title {
+  position: relative;
+  z-index: 5;
+  flex-shrink: 0;
+  background: #342A35;
+  color: #F5F1F1;
+  padding: 18px 28px;
+  text-align: center;
+  border-radius: 0;
+  width: auto;
+  height: auto;
+}
+
+#home-banner .home-site-title-cn {
+  font-size: 26px;
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: 2px;
+  color: #F5F1F1;
+}
+
+#home-banner .home-site-title-en {
+  font-size: 11px;
+  letter-spacing: 3px;
+  margin-top: 8px;
+  color: #C9BACA;
+}
+
+/* ===== Homepage welcome section ===== */
+
+.home-welcome {
+  width: 95%;
+  max-width: var(--meow-main-width);
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 42%;
+  align-items: center;
+  gap: 55px;
+
+  padding: 20px 0 35px;
+  box-sizing: border-box;
+}
+
+/* Left: introduction */
+.home-welcome-text {
+  min-width: 0;
+}
+
+.home-welcome-text h2 {
+  margin: 0 0 18px;
+  font-size: 24px;
+  font-weight: 500;
+  color: #342A35;
+}
+
+.home-welcome-text p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.9;
+  color: #817385;
+}
+
+/* Right: cropped engraving */
+.home-welcome-image {
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+  transform: translateX(25px);
+}
+
+.home-welcome-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 40%;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .home-welcome {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    padding: 35px 20px 45px;
+  }
+
+  .home-welcome-image {
+    height: 180px;
+  }
+}
+
+/* Post page: back to archives */
+.post-home-link {
+  display: inline-block;
+  background: #342A35;
+  color: #F5F1F1 !important;
+  padding: 14px 22px;
+  text-decoration: none !important;
+  border-radius: 0;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.post-home-link:hover {
+  background: #655067;
+  color: #F5F1F1 !important;
+}
+
+/* Footer typography */
+.footer,
+.footer a,
+#footer-copyright,
+#footer-info,
+#footer-statistic {
+  font-family: Arial, "PingFang SC", "Microsoft YaHei", sans-serif !important;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+/* ===== About page ===== */
+
+.about-page {
+  position: relative;
+  min-height: 430px;
+  padding-right: 32%;
+  box-sizing: border-box;
+}
+
+/* Back button */
+.about-back-link {
+  display: inline-block;
+  background: #342A35;
+  color: #F5F1F1 !important;
+  padding: 12px 20px;
+  font-size: 15px;
+  text-decoration: none !important;
+  border-radius: 0;
+  margin-bottom: 70px;
+}
+
+.about-back-link:hover {
+  background: #655067;
+  color: #F5F1F1 !important;
+}
+
+/* Right-side vertical image */
+.about-ruins-image {
+  position: absolute;
+  right: 0;
+  top: 25px;
+  width: 27%;
+  height: 360px;
+  overflow: hidden;
+}
+
+.about-ruins-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: 60% center;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .about-page {
+    padding-right: 0;
+  }
+
+  .about-ruins-image {
+    position: relative;
+    width: 100%;
+    height: 230px;
+    top: auto;
+    right: auto;
+    margin-bottom: 30px;
+  }
+}
+
+.post-nav-next {
+  background: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+/* Remove decorative pseudo-elements */
+.post-nav-prev::before,
+.post-nav-prev::after,
+.post-nav-next::before,
+.post-nav-next::after {
+  display: none !important;
+}
+
+.post-nav-prev:hover,
+.post-nav-next:hover {
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+/* Remove remaining post navigation card styles */
+.post-nav,
+.post-nav a,
+.post-nav-prev,
+.post-nav-next,
+.post-nav-prev:hover,
+.post-nav-next:hover {
+  background: transparent !important;
+  background-image: none !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+.post-nav a::before,
+.post-nav a::after,
+.post-nav-prev::before,
+.post-nav-prev::after,
+.post-nav-next::before,
+.post-nav-next::after {
+  content: none !important;
+  display: none !important;
+}
+
+/* Homepage site name */
+.home-site-label {
+  display: inline-block;
+  width: fit-content;
+  max-width: 100%;
+  background: #342A35;
+  padding: 12px 16px;
+  margin-bottom: 25px;
+  box-sizing: border-box;
+}
+
+.home-site-label-cn {
+  color: #F5F1F1;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.home-site-label-en {
+  color: #C9BACA;
+  font-size: 12px;
+  letter-spacing: 1px;
+  margin-top: 5px;
+}
+
+/* Homepage introduction typography */
+.home-welcome-text,
+.home-welcome-text h2,
+.home-welcome-text p,
+.home-site-label {
+  font-family: Arial, "PingFang SC", "Microsoft YaHei", sans-serif !important;
+}
+
+.home-welcome-text h2 {
+  font-size: 22px;
+  font-weight: 500;
+  letter-spacing: 0;
+}
+
+.home-welcome-text p {
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+.home-site-label-cn {
+  font-family: Arial, "PingFang SC", "Microsoft YaHei", sans-serif !important;
+}
+
+.home-site-label-en {
+  font-family: Arial, sans-serif !important;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+/* About page typography */
+.about-page .page-main,
+.about-page .page-main p,
+.about-page .page-main strong {
+  font-family: Arial, "PingFang SC", "Microsoft YaHei", sans-serif !important;
+}
+
+/* 隐藏关于页面标题前的 # 装饰 */
+.about-page .page-main h3::before {
+  content: none !important;
+  display: none !important;
+}
+
+/* 文章页：返回按钮与标题之间的距离 */
+.post-content > .post-home-link {
+  margin-bottom: 40px;
+}

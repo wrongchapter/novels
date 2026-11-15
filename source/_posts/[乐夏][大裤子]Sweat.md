@@ -7,7 +7,7 @@ categories:
   - Real People Slash
   - 乐夏
 
-description: 卖给我不能打折吗？
+description: 卖给我没有优惠价吗？
 
 warnings: 
 - 张伟x彭磊
